@@ -1,0 +1,326 @@
+在GitHub上创建新仓库时，您可以勾选自动添加一个README文件。这个选项会在创建仓库的同时，自动生成一个包含基本说明的README.md文件。这个文件使用Markdown语法编写，用于描述项目、说明如何使用项目、列出贡献者或提供其他相关信息。
+
+如果您想要上传自己的README.md文件，也可以在创建仓库时不勾选自动添加选项，然后手动上传您已经准备好的README.md文件。手动上传的步骤如下：
+
+在本地创建一个新的Markdown文件，命名为README.md。
+使用文本编辑器打开这个文件，并添加您的项目说明。
+保存文件。
+将这个文件添加到您的Git仓库中，并提交到GitHub。
+以下是具体的命令行操作步骤：
+
+# 创建并编辑README.md文件
+echo "# My Project README" > README.md
+# 或者使用文本编辑器打开并编辑
+
+# 将README.md文件添加到Git仓库
+git add README.md
+
+# 提交更改到
+
+Gabe
+C:\Users\15756\Desktop\AITestCode好了，我现在已经创建好了一个git仓库。
+太好了！您已经成功创建了Git仓库。接下来，您可以开始将您的项目文件添加到仓库中，并使用Git进行版本控制。如果您有任何具体的问题或需要进一步的指导，比如如何提交更改、推送代码到GitHub，或者如何使用分支等，请随时告诉我，我会尽力帮助您。
+
+
+Gabe
+那么接下来我应该干什么？是直接开始写网站的代码，还是先在本地建一个git仓库？
+既然您已经在GitHub上创建了仓库，接下来您应该做的是在本地初始化一个Git仓库，并与您在GitHub上创建的仓库关联起来。这样，您就可以开始编写网站的代码，并使用Git来跟踪和管理您的更改。以下是具体步骤：
+
+在本地创建项目文件夹：
+mkdir AITestCode
+cd AITestCode
+初始化本地Git仓库：
+git init
+创建一个简单的静态网页（例如，index.html）： 您可以使用文本编辑器创建一个HTML文件，例如：
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Test Code</title>
+</head>
+<body>
+    <h1>Welcome to AI Test Code!</h1>
+</body>
+</html>
+将您的GitHub仓库设置为远程仓库：
+git remote add origin https://github.com/您的用户名/AITestCode.git
+添加并提交您的更改：
+git add .
+git commit -m "Initial commit with index.html"
+推送您的更改到GitHub：
+git branch -M main
+git push -u origin main
+完成以上步骤后，您就可以开始在本地编写代码，并使用Git来管理您的代码版本了。每次您想要将本地更改同步到GitHub时，您都需要执行git add、git commit和git push这些命令。
+
+如果您是第一次使用Git，可能会遇到一些权限问题或配置问题。如果遇到任何问题，请随时提问，我会尽力帮助您解决。
+
+
+Gabe
+
+这个就表示已经初始化好了，对吧？
+是的，根据图片中的信息，Git仓库已经成功在C:/Users/15756/Desktop/AITestCode/.git/路径下被初始化为一个空仓库。以下是对您问题的详细解答：
+
+Git仓库的初始化：
+Git是一种版本控制系统，用于跟踪和管理代码的变化。仓库是Git中的核心概念，它代表了项目的所有历史和当前状态。
+执行git init命令可以在指定的目录中初始化一个新的Git仓库。这会创建一个.git子目录，其中包含了仓库的基本结构和文件。
+成功的初始化标志：
+图中的输出显示“Initialized empty Git repository in C:/Users/15756/Desktop/AITestCode/.git/”，这意味着git init命令已经完成，且没有提交任何文件到仓库中。
+通常，仓库初始化完成后，.git子目录会被创建，并且可能包含以下几个文件和目录：
+.git/config：存储仓库的设置和配置信息。
+.git/hooks：存放了一些预设的钩子脚本，这些脚本会在特定的操作（如commit、push等）前后被执行。
+.git/index：暂存区，用于缓存未提交的更改。
+**确认仓库的状态
+
+Gabe
+这是我的gate远程仓库。https://github.com/nikenking/LIttleDemoShow
+然后我在我的ai test code文件夹下，也就是.git的平级文件夹下放了一个zpqy.html的文件。
+然后在上传前我想问一下这个git bash怎么刷新一下，看到我。当前是否已经检测到了这个文件。或者说不需要这步，直接git add就行了吗？
+在Git Bash中，您不需要特别刷新来检测到新文件。Git会根据您的工作目录自动检测文件变化。当您添加一个新文件到您的仓库时，您可以简单地使用git add命令来开始跟踪这个文件。
+
+以下是您应该执行的步骤：
+
+检查当前状态： 您可以使用git status命令来查看当前仓库的状态，包括未被跟踪的新文件和已修改的文件。
+git status
+添加文件： 如果git status显示您的zpqy.html文件未被跟踪，您可以使用git add命令来添加它。
+git add zpqy.html
+提交更改： 一旦您添加了文件，您需要提交这些更改到您的仓库。
+git commit -m "Add zpqy.html"
+推送更改到远程仓库： 最后，您需要将您的更改推送到远程仓库。
+git push origin main
+确保在执行这些命令之前，您的Git Bash所在的目录是您的本地仓库目录（即AI Test Code文件夹）。如果您已经将远程仓库（GitHub上的LittleDemoShow）关联到您的本地仓库，那么origin将指向您的远程仓库，main是您要推送的分支。如果您还没有关联远程仓库，您需要先执行git remote add命令来添加远程仓库。
+
+
+Gabe
+第1个问题get commit -m其中的-m是什么意思？而且还有哪些其他参数？
+第2个问题我还没有和远程仓库做连接呢，其中的original还没有布置。
+第1个问题：git commit -m命令中的-m参数用于指定提交信息。在Git中，每次提交都需要一个提交信息，这个信息用来简要描述您这次提交的内容和目的。-m后面紧跟的双引号中的文本就是您的提交信息。例如：
+
+git commit -m "Add zpqy.html file"
+这个命令会创建一个新的提交，提交信息为"Add zpqy.html file"。
+
+除了-m，git commit还有一些其他常用的参数：
+
+--amend：修改最后一次提交。如果您发现上次提交忘记包含某些文件或者提交信息有误，可以使用这个参数来修正。
+-a：自动将已跟踪的文件添加到暂存区，然后进行提交，省去了git add步骤。
+-v：在提交信息中显示差异对比。
+第2个问题：如果您还没有将本地仓库与远程仓库连接，您需要先执行git remote add命令来添加远程仓库。远程仓库通常被命名为origin，但这只是一个约定俗成的名字，您可以使用其他任何名字。以下是如何添加远程仓库并推送您的更改的步骤：
+
+添加远程仓库：
+git remote add origin https://github.com/nikenking/LittleDemoShow.git
+这条命令会将您在GitHub上的仓库添加为远程仓库，命名为origin。
+推送本地分支到远程仓库：
+git push -u origin main
+这条命令会将您的本地main分支推送到远程仓库的main分支，并且-u参数会设置本地main分支跟踪远程main分支，这样以后您可以使用git push直接推送。
+确保在执行这些命令之前，您的本地仓库已经包含了您想要推送的更改。如果您已经添加了zpqy.html文件并想要将其包含在第一次推送中，请先执行git add和git commit命令。
+
+
+Gabe
+对于第1个问题，我之前用get的时候是有很多的信息要说明，所以都是打开一个大的页面来专门输入的。
+您提到的“get”可能是想指“git commit”。当您使用git commit命令时，如果您不使用-m参数，Git会打开一个文本编辑器，通常是默认的系统编辑器，如Vim、Nano或其他，以便您可以提供一个更详细的提交信息。这个提交信息可以包括更改的原因、做了哪些更改、解决了哪些问题等。
+
+如果您想要提供一个详细的提交信息，您可以简单地执行git commit而不加-m参数。例如：
+
+git commit
+这将打开一个编辑器，您可以在其中撰写多行提交信息。完成后，保存并关闭编辑器，Git会将您的更改连同提交信息一起保存。
+
+如果您想要指定一个不同的编辑器，可以使用git config命令来设置。例如，如果您想要使用Notepad++，可以这样设置：
+
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+请根据您的编辑器路径和安装位置相应地调整上述命令。
+
+
+Gabe
+这个是我直接提交还有问题吧，我还没有做什么密码配对什么之类相关的。
+您提到的密码配对可能是指SSH密钥认证，这是一种安全的方式来与GitHub通信，无需每次都输入用户名和密码。如果您还没有设置SSH密钥，您可以使用HTTPS方式来推送代码，这种方式会在推送时要求您输入GitHub的用户名和密码。
+
+当您使用HTTPS URL添加远程仓库时，如下所示：
+
+git remote add origin https://github.com/nikenking/LittleDemoShow.git
+在第一次推送（git push）时，系统会提示您输入GitHub的用户名和密码。输入后，您的凭据会被缓存，以便在未来的操作中无需重复输入，除非您更改了密码或者删除了凭据。
+
+如果您想要使用SSH密钥认证，您可以按照以下步骤生成并添加SSH密钥到GitHub：
+
+检查现有SSH密钥： 在终端中运行以下命令，检查您的电脑上是否已经存在SSH密钥：
+ls -al ~/.ssh
+如果看到id_rsa和id_rsa.pub文件，那么您已经生成了密钥。如果没有，请继续下一步。
+生成新的SSH密钥： 在终端中运行以下命令，替换您的电子邮件地址为您注册GitHub时使用的电子邮件地址：
+ssh-keygen -t ed25519 -C "your_email@example.com"
+按照提示操作，您可以设置密码短语（可选），然后密钥将被保存到~/.ssh目录。
+将SSH公钥添加到GitHub：
+复制id_rsa.pub文件的内容。
+登录GitHub，进入“Settings” -> “SSH and GPG keys”。
+点击“New SSH key”或“Add SSH key”。
+在“Title”字段中给密钥起一个名字。
+在“Key”字段中粘贴复制的公钥内容。
+点击“Add SSH key”。
+完成以上步骤后，您就可以使用SSH方式来克隆和推送仓库了。使用SSH方式的好处是您不需要每次都输入用户名和密码，并且比HTTPS方式更安全。
+
+
+Gabe
+
+这是我运行的第1个命令出现的画面。看不太懂啊，我这个是需要重新生成吗？还是就用现在已有的。
+这是您运行git push -u origin main命令时出现的错误提示。根据图片中的信息，我们可以分析出以下几点：
+
+错误信息：git push -u origin main failed to push some refs to ‘https://github.com/nikenking/LittleDemoShow.git’.
+原因：这通常意味着远程仓库（origin）的分支main与本地仓库的当前分支master不匹配。
+解决方法：您可以尝试以下解决方案： a. 确保两个仓库的分支名称相同。 b. 使用git pull --rebase origin main来合并远程分支的最新更改到本地分支。 c. 如果需要创建一个新的分支并将其推送到远程仓库，可以使用git branch -M new_branch && git push -u origin new_branch。
+其他建议：
+检查您的git配置，特别是SSH密钥设置，以确保您可以安全地连接到远程仓库。
+如果以上方法都无法解决问题，请考虑查看GitHub官方文档或寻求在线帮助。
+如果您有其他问题或需要进一步的帮助，请随时告诉我，我将为您提供解答。
+
+
+Gabe
+嗯，就是说我本地创建的文件夹就是母文件夹。的名字和get仓库的名字不匹配是吧？
+是的，根据错误信息，看起来您本地的分支名称和远程仓库的分支名称不匹配。Git默认情况下，当您初始化一个新的仓库时，本地创建的默认分支通常叫做master（在较新的Git版本中，默认分支名称可能已经改为main）。而您尝试推送到的远程仓库的默认分支可能是main。
+
+为了解决这个问题，您需要确保本地分支的名称与远程仓库的分支名称相同。以下是您可以采取的步骤：
+
+查看本地分支： 使用以下命令查看您当前的本地分支名称：
+git branch
+重命名本地分支（如果需要）： 如果您的本地分支名为master，而远程分支名为main，您可以使用以下命令重命名本地分支：
+git branch -m master main
+推送本地分支到远程仓库： 重命名本地分支后，您可以尝试再次推送：
+git push -u origin main
+如果您的本地分支已经是main，而远程仓库的分支也是main，那么可能是其他原因导致的推送失败。在这种情况下，您可以尝试以下命令来拉取远程仓库的最新更改，并尝试再次推送：
+
+git pull --rebase origin main
+git push -u origin main
+确保在执行这些命令之前，您的本地分支确实包含了您想要推送的更改，并且您已经添加了远程仓库的URL。如果您在执行这些命令时遇到任何问题，请告诉我具体的错误信息，我会尽力帮助您解决。
+
+
+Gabe
+好吧，是我分之名写错了，改成master就行了。现在的问题是我这个ssh怎么用啊？我刚刚输入的那个ls杠al的那个命令你也看到了，下面是有一些文件的。我是直接复用这些文件，还是重新创建一个新的文件啊？
+如果您已经看到~/.ssh目录下有文件，那么您可能已经有了一个现有的SSH密钥。通常，SSH密钥包括两个文件：一个私钥（id_rsa）和一个公钥（id_rsa.pub）。私钥应该保密，而公钥可以安全地分享。
+
+在您的情况下，您可以选择使用现有的SSH密钥，除非您有特定的原因需要创建一个新的密钥（例如，如果您怀疑现有的密钥不安全或已丢失）。以下是使用现有SSH密钥的步骤：
+
+检查公钥内容： 使用以下命令查看您的公钥内容：
+cat ~/.ssh/id_rsa.pub
+复制显示的内容。
+将SSH公钥添加到GitHub：
+登录到您的GitHub账户。
+点击您的头像，然后选择“Settings”。
+在左侧菜单中选择“SSH and GPG keys”。
+点击“New SSH key”或“Add SSH key”。
+给您的密钥起一个名称，并在“Key”字段中粘贴您刚刚复制的公钥内容。
+点击“Add SSH key”。
+使用SSH方式克隆和推送仓库： 一旦您添加了SSH密钥，您可以使用SSH URL来克隆和推送仓库。如果您之前使用的是HTTPS URL，您需要更改远程仓库的URL为SSH形式。例如：
+git remote set-url origin git@github.com:nikenking/LittleDemoShow.git
+之后，您可以使用git push和git pull命令，而无需输入用户名和密码。
+如果您决定创建一个新的SSH密钥，您可以按照我之前提供的步骤进行操作。记住，每次创建新的密钥时，您都需要将其添加到GitHub账户中，并更新任何使用旧密钥的远程仓库的URL。
+
+
+Gabe
+好了，提交方式已经改了，但是提交后出了一些这个你什么意思？$ git push -u origin master
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The RSA host key for github.com has changed,
+and the key for the corresponding IP address 20.205.243.166
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.
+Please contact your system administrator.
+Add correct host key in /c/Users/15756/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /c/Users/15756/.ssh/known_hosts:1
+RSA host key for github.com has changed and you have requested strict checking.
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+这个错误信息表明您的计算机在尝试通过SSH连接到GitHub时遇到了问题。具体来说，它提示GitHub的RSA主机密钥已经改变，这可能是DNS欺骗（DNS SPOOFING）的迹象，或者GitHub的IP地址及其主机密钥同时发生了变化。
+
+当您看到这样的警告时，通常意味着您的计算机之前已经存储了GitHub的旧主机密钥，但现在GitHub提供了一个新的密钥。这种情况可能是正常的，比如GitHub更换了服务器或更新了其SSL证书，但也有可能是安全问题。
+
+为了解决这个问题，您需要更新您计算机上的已知主机密钥列表。您可以手动编辑known_hosts文件来删除或更新GitHub的条目，或者使用以下命令自动修复这个问题：
+
+ssh-keygen -R github.com
+这个命令会从您的known_hosts文件中删除GitHub的旧密钥条目。之后，当您尝试再次通过SSH连接到GitHub时，您的计算机将会收到新的密钥，并提示您是否信任它。确认信任新密钥后，您应该能够正常进行推送操作。
+
+如果您仍然遇到问题，可能需要检查您的SSH配置或联系您的系统管理员以获取进一步的帮助。
+
+
+Gabe
+Gabe@LAPTOP-VIQ88PQV MINGW64 ~/Desktop/AITestCode (master)
+$ ssh-keygen -R github.com
+# Host github.com found: line 1
+/c/Users/15756/.ssh/known_hosts updated.
+Original contents retained as /c/Users/15756/.ssh/known_hosts.old
+这个迷你输入之后这样显示对吗？
+是的，您看到的输出表明ssh-keygen -R github.com命令已经成功执行。这条命令从您的known_hosts文件中删除了与GitHub.com相关的旧主机密钥条目，并将原始文件保存为known_hosts.old。
+
+现在，当您尝试再次通过SSH连接到GitHub时，您的计算机将会收到新的密钥，并可能会提示您是否信任这个新的密钥。确认信任新密钥后，您应该能够正常进行推送操作。
+
+如果您的推送操作仍然失败，您可以尝试以下命令来推送您的更改：
+
+git push -u origin master
+如果系统提示您是否信任GitHub的新密钥，请回答“yes”以添加新的密钥到您的known_hosts文件中。这将允许您的计算机安全地与GitHub通信。
+
+如果一切正常，您的代码应该会被成功推送到GitHub的远程仓库中。如果您遇到任何其他问题，请告诉我，我会尽力帮助您解决。
+
+
+Gabe
+提交成功了，但是他还是为什么提示我有风险？
+Gabe@LAPTOP-VIQ88PQV MINGW64 ~/Desktop/AITestCode (master)
+$ git push -u origin master
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,20.205.243.166' (ECDSA) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1014 bytes | 1014.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:nikenking/LIttleDemoShow.git
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/nikenking/LIttleDemoShow/pull/new/master
+remote:
+To github.com:nikenking/LittleDemoShow.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+您收到的警告信息是因为Git在第一次通过SSH连接到GitHub时无法验证主机真实性。这是因为您的计算机没有之前存储的GitHub主机密钥。当您看到提示时，输入“yes”表示您信任GitHub的密钥，并将其添加到您计算机的known_hosts文件中，这样以后就可以安全地连接了。
+
+关于“这个仓库已经移动”的信息，这可能意味着您之前使用的是旧的仓库地址，而现在GitHub提示您使用新的地址。这通常发生在仓库被重命名或者移动到不同的用户或组织时。如果您看到这个信息，请确保您正在使用的远程仓库URL是最新的。
+
+如果您刚刚推送成功，并且您的本地分支master已经与远程分支master同步，那么您应该不用担心这个警告。您的代码已经成功推送到GitHub，并且您的本地分支正在跟踪远程分支。
+
+如果您想要确保您的远程仓库URL是最新的，您可以运行以下命令来查看：
+
+git remote -v
+这将显示您远程仓库的URL。如果需要更新，您可以使用以下命令：
+
+git remote set-url origin git@github.com:nikenking/LIttleDemoShow.git
+请确保替换命令中的URL与GitHub提示您使用的URL相匹配。如果您有任何疑问或需要进一步的帮助，请随时告诉我。
+
+
+Gabe
+我这整个和git进行交互的过程中用到了多少个密钥这些密钥的？都是怎么工作的？
+在使用Git与GitHub进行交互的过程中，您可能会涉及到几种不同的密钥，它们各自有不同的用途和工作方式。以下是您可能遇到的一些密钥类型及其作用：
+
+SSH密钥：
+私钥（id_rsa）：这是一个保密的文件，存储在您的本地计算机上，用于证明您的身份。当您尝试与GitHub进行SSH连接时，您的计算机使用这个私钥来加密一个认证信息，发送给GitHub。
+公钥（id_rsa.pub）：这是一个可以公开的文件，您需要将其添加到您的GitHub账户中。GitHub使用这个公钥来解密您发送的认证信息，以验证您的身份。
+HTTPS凭据：
+当您通过HTTPS方式与GitHub通信时，您可能需要在推送或拉取代码时输入您的GitHub用户名和密码。这些凭据用于基本的身份验证，并可能被您的计算机缓存以供将来使用。
+Git凭据存储：
+Git有一个凭据存储系统，可以存储您输入的HTTPS凭据。这样，您不需要每次都输入用户名和密码。这些凭据通常存储在您计算机的凭据管理器中。
+令牌（Token）：
+在某些情况下，您可能使用个人访问令牌（Personal Access Tokens）来代替传统的用户名和密码。这些令牌是GitHub提供的一种安全方式，用于访问API或进行命令行操作。您可以创建多个令牌，每个令牌具有特定的权限和过期时间。
+在您与Git和GitHub的交互中，主要使用的密钥是SSH密钥对。您在本地生成这个密钥对，将公钥添加到GitHub账户中，这样当您通过SSH方式与GitHub通信时，您的计算机可以使用私钥来证明您的身份，而GitHub可以使用公钥来验证这个身份。
+
+如果您使用的是HTTPS方式，那么您在推送或拉取代码时需要输入用户名和密码。这些凭据不会被存储为密钥，而是作为普通的凭据进行管理。
+
+总的来说，SSH密钥是用于加密和安全认证的，而HTTPS凭据和令牌则是用于基本的身份验证。您应该确保您的私钥保持安全，不要与他人分享，并且公钥应该只添加到您信任的服务中。
